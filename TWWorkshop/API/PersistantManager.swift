@@ -23,8 +23,7 @@ final class PersistencyManager {
             }
         }
         
-        if let mobileData = data,
-            let decodedList = try? JSONDecoder().decode([ShopperList].self, from: mobileData) {
+        if let mobileData = data, let decodedList = try? JSONDecoder().decode([ShopperList].self, from: mobileData) {
             shopperList = decodedList
         }
     }

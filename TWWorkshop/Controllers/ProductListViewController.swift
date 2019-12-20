@@ -57,6 +57,7 @@ extension ProductListViewController: UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         var defaultCell = tableView.dequeueReusableCell(withIdentifier: CellIdentifiers.defaultCell)
         let tableData = viewModel.productListData[indexPath.row].getTableData()
+        
         if defaultCell == nil {
             defaultCell = UITableViewCell(style: .subtitle, reuseIdentifier: CellIdentifiers.defaultCell)
             defaultCell!.selectionStyle = .none
@@ -65,6 +66,7 @@ extension ProductListViewController: UITableViewDelegate, UITableViewDataSource{
             defaultCell!.textLabel?.numberOfLines = 0
             defaultCell!.detailTextLabel?.numberOfLines = 0
         }
+        
         if let cell = defaultCell{
             cell.textLabel?.text = tableData.title
             cell.detailTextLabel?.text = tableData.des
@@ -74,6 +76,7 @@ extension ProductListViewController: UITableViewDelegate, UITableViewDataSource{
             }
             return cell
         }
+        
         return UITableViewCell()
     }
 }

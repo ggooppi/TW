@@ -13,9 +13,10 @@ import ObjectMapper
 
 public class Webservice: NSObject {
     
-    //MARK: Properties
+    //MARK: - Properties
     static let shared = Webservice()
     
+    //MARK: - Functions
     func getProductList(completionHandler: @escaping ((Bool, [[String:Any]]?, String?) -> Void)) -> Void {
         
         Alamofire.request(NetworkURL.productList, method: .get)
