@@ -1,0 +1,493 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CCAF712A23AC92A10040D340 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCAF712923AC92A10040D340 /* AppDelegate.swift */; };
+		CCAF712C23AC92A10040D340 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCAF712B23AC92A10040D340 /* SceneDelegate.swift */; };
+		CCAF712E23AC92A10040D340 /* ProductListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCAF712D23AC92A10040D340 /* ProductListViewController.swift */; };
+		CCAF713123AC92A10040D340 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CCAF712F23AC92A10040D340 /* Main.storyboard */; };
+		CCAF713323AC92A20040D340 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CCAF713223AC92A20040D340 /* Assets.xcassets */; };
+		CCAF713623AC92A20040D340 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CCAF713423AC92A20040D340 /* LaunchScreen.storyboard */; };
+		CCAF714223AC95F60040D340 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCAF714123AC95F60040D340 /* Constant.swift */; };
+		CCAF714623AC9A890040D340 /* PersistantManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCAF714523AC9A890040D340 /* PersistantManager.swift */; };
+		CCAF714923AC9AEB0040D340 /* Shopper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCAF714823AC9AEB0040D340 /* Shopper.swift */; };
+		CCAF714B23AC9BF10040D340 /* sampleJSON.json in Resources */ = {isa = PBXBuildFile; fileRef = CCAF714A23AC9BF10040D340 /* sampleJSON.json */; };
+		CCAF714E23AC9CA20040D340 /* ProductListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCAF714D23AC9CA20040D340 /* ProductListViewModel.swift */; };
+		CCAF715123ACB30A0040D340 /* Webservice.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCAF715023ACB30A0040D340 /* Webservice.swift */; };
+		E8AAEB29F26160B1A4DC0B92 /* Pods_TWWorkshop.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8101363FEA2A2D749195FF9 /* Pods_TWWorkshop.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		57DF55222DD3E4DB2493C09B /* Pods-TWWorkshop.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TWWorkshop.release.xcconfig"; path = "Target Support Files/Pods-TWWorkshop/Pods-TWWorkshop.release.xcconfig"; sourceTree = "<group>"; };
+		CCAF712623AC92A10040D340 /* TWWorkshop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TWWorkshop.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CCAF712923AC92A10040D340 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		CCAF712B23AC92A10040D340 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		CCAF712D23AC92A10040D340 /* ProductListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListViewController.swift; sourceTree = "<group>"; };
+		CCAF713023AC92A10040D340 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		CCAF713223AC92A20040D340 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CCAF713523AC92A20040D340 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		CCAF713723AC92A20040D340 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CCAF714123AC95F60040D340 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
+		CCAF714523AC9A890040D340 /* PersistantManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistantManager.swift; sourceTree = "<group>"; };
+		CCAF714823AC9AEB0040D340 /* Shopper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shopper.swift; sourceTree = "<group>"; };
+		CCAF714A23AC9BF10040D340 /* sampleJSON.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = sampleJSON.json; sourceTree = "<group>"; };
+		CCAF714D23AC9CA20040D340 /* ProductListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListViewModel.swift; sourceTree = "<group>"; };
+		CCAF715023ACB30A0040D340 /* Webservice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Webservice.swift; sourceTree = "<group>"; };
+		D8101363FEA2A2D749195FF9 /* Pods_TWWorkshop.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TWWorkshop.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FED278E885A36F659F8E2A8C /* Pods-TWWorkshop.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TWWorkshop.debug.xcconfig"; path = "Target Support Files/Pods-TWWorkshop/Pods-TWWorkshop.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CCAF712323AC92A10040D340 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E8AAEB29F26160B1A4DC0B92 /* Pods_TWWorkshop.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		AF93AAEBD64762753099A2B2 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				FED278E885A36F659F8E2A8C /* Pods-TWWorkshop.debug.xcconfig */,
+				57DF55222DD3E4DB2493C09B /* Pods-TWWorkshop.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		CCAF711D23AC92A10040D340 = {
+			isa = PBXGroup;
+			children = (
+				CCAF712823AC92A10040D340 /* TWWorkshop */,
+				CCAF712723AC92A10040D340 /* Products */,
+				AF93AAEBD64762753099A2B2 /* Pods */,
+				DB7C17961A6E046E5084349B /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		CCAF712723AC92A10040D340 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CCAF712623AC92A10040D340 /* TWWorkshop.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CCAF712823AC92A10040D340 /* TWWorkshop */ = {
+			isa = PBXGroup;
+			children = (
+				CCAF713D23AC92A90040D340 /* Delegates */,
+				CCAF713F23AC92C30040D340 /* Storyboards */,
+				CCAF713E23AC92B80040D340 /* Controllers */,
+				CCAF714C23AC9C850040D340 /* View Model */,
+				CCAF714723AC9ACD0040D340 /* Model */,
+				CCAF714423AC9A770040D340 /* API */,
+				CCAF714023AC95750040D340 /* Constant */,
+				CCAF713223AC92A20040D340 /* Assets.xcassets */,
+				CCAF713723AC92A20040D340 /* Info.plist */,
+				CCAF714A23AC9BF10040D340 /* sampleJSON.json */,
+			);
+			path = TWWorkshop;
+			sourceTree = "<group>";
+		};
+		CCAF713D23AC92A90040D340 /* Delegates */ = {
+			isa = PBXGroup;
+			children = (
+				CCAF712923AC92A10040D340 /* AppDelegate.swift */,
+				CCAF712B23AC92A10040D340 /* SceneDelegate.swift */,
+			);
+			path = Delegates;
+			sourceTree = "<group>";
+		};
+		CCAF713E23AC92B80040D340 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				CCAF712D23AC92A10040D340 /* ProductListViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		CCAF713F23AC92C30040D340 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				CCAF713423AC92A20040D340 /* LaunchScreen.storyboard */,
+				CCAF712F23AC92A10040D340 /* Main.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		CCAF714023AC95750040D340 /* Constant */ = {
+			isa = PBXGroup;
+			children = (
+				CCAF714123AC95F60040D340 /* Constant.swift */,
+			);
+			path = Constant;
+			sourceTree = "<group>";
+		};
+		CCAF714423AC9A770040D340 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				CCAF714523AC9A890040D340 /* PersistantManager.swift */,
+				CCAF715023ACB30A0040D340 /* Webservice.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		CCAF714723AC9ACD0040D340 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CCAF714823AC9AEB0040D340 /* Shopper.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		CCAF714C23AC9C850040D340 /* View Model */ = {
+			isa = PBXGroup;
+			children = (
+				CCAF714D23AC9CA20040D340 /* ProductListViewModel.swift */,
+			);
+			path = "View Model";
+			sourceTree = "<group>";
+		};
+		DB7C17961A6E046E5084349B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D8101363FEA2A2D749195FF9 /* Pods_TWWorkshop.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CCAF712523AC92A10040D340 /* TWWorkshop */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CCAF713A23AC92A20040D340 /* Build configuration list for PBXNativeTarget "TWWorkshop" */;
+			buildPhases = (
+				E48EB29855A903498F08A4EA /* [CP] Check Pods Manifest.lock */,
+				CCAF712223AC92A10040D340 /* Sources */,
+				CCAF712323AC92A10040D340 /* Frameworks */,
+				CCAF712423AC92A10040D340 /* Resources */,
+				65561DD88CD9DA2B26EAD0B5 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TWWorkshop;
+			productName = TWWorkshop;
+			productReference = CCAF712623AC92A10040D340 /* TWWorkshop.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CCAF711E23AC92A10040D340 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1120;
+				LastUpgradeCheck = 1120;
+				ORGANIZATIONNAME = TW;
+				TargetAttributes = {
+					CCAF712523AC92A10040D340 = {
+						CreatedOnToolsVersion = 11.2.1;
+					};
+				};
+			};
+			buildConfigurationList = CCAF712123AC92A10040D340 /* Build configuration list for PBXProject "TWWorkshop" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CCAF711D23AC92A10040D340;
+			productRefGroup = CCAF712723AC92A10040D340 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CCAF712523AC92A10040D340 /* TWWorkshop */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CCAF712423AC92A10040D340 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CCAF713623AC92A20040D340 /* LaunchScreen.storyboard in Resources */,
+				CCAF713323AC92A20040D340 /* Assets.xcassets in Resources */,
+				CCAF713123AC92A10040D340 /* Main.storyboard in Resources */,
+				CCAF714B23AC9BF10040D340 /* sampleJSON.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		65561DD88CD9DA2B26EAD0B5 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TWWorkshop/Pods-TWWorkshop-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TWWorkshop/Pods-TWWorkshop-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TWWorkshop/Pods-TWWorkshop-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E48EB29855A903498F08A4EA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TWWorkshop-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CCAF712223AC92A10040D340 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CCAF712E23AC92A10040D340 /* ProductListViewController.swift in Sources */,
+				CCAF714623AC9A890040D340 /* PersistantManager.swift in Sources */,
+				CCAF715123ACB30A0040D340 /* Webservice.swift in Sources */,
+				CCAF712A23AC92A10040D340 /* AppDelegate.swift in Sources */,
+				CCAF714E23AC9CA20040D340 /* ProductListViewModel.swift in Sources */,
+				CCAF712C23AC92A10040D340 /* SceneDelegate.swift in Sources */,
+				CCAF714223AC95F60040D340 /* Constant.swift in Sources */,
+				CCAF714923AC9AEB0040D340 /* Shopper.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		CCAF712F23AC92A10040D340 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CCAF713023AC92A10040D340 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		CCAF713423AC92A20040D340 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CCAF713523AC92A20040D340 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		CCAF713823AC92A20040D340 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		CCAF713923AC92A20040D340 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CCAF713B23AC92A20040D340 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FED278E885A36F659F8E2A8C /* Pods-TWWorkshop.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = D5AD6R37K9;
+				INFOPLIST_FILE = TWWorkshop/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.tw.TWWorkshop;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		CCAF713C23AC92A20040D340 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 57DF55222DD3E4DB2493C09B /* Pods-TWWorkshop.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = D5AD6R37K9;
+				INFOPLIST_FILE = TWWorkshop/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.tw.TWWorkshop;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CCAF712123AC92A10040D340 /* Build configuration list for PBXProject "TWWorkshop" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CCAF713823AC92A20040D340 /* Debug */,
+				CCAF713923AC92A20040D340 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CCAF713A23AC92A20040D340 /* Build configuration list for PBXNativeTarget "TWWorkshop" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CCAF713B23AC92A20040D340 /* Debug */,
+				CCAF713C23AC92A20040D340 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CCAF711E23AC92A10040D340 /* Project object */;
+}
