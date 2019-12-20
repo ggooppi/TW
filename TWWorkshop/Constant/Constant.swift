@@ -14,3 +14,7 @@ let kSampleJSON = ""
 enum CellIdentifiers {
     static let defaultCell = "cell"
 }
+
+enum NetworkURL {
+    static let productList = "http://www.mocky.io/v2/5dfb59e72f00006200ff9e80"
+}

@@ -7,12 +7,39 @@
 //
 
 import Foundation
+import ObjectMapper
 
-struct ShopperList: Codable {
-    var pid: String
-    var name: String
-    var price: String
+class ShopperList: NSObject, Codable, Mappable{
+    var pid = ""
+    var name = ""
+    var price = ""
     var offerPrice : String? = ""
-    var image: String
-    var desc: String
+    var image = ""
+    var desc = ""
+    
+    struct ListTableData {
+        let title: String
+        let des: String
+        let desColor: UIColor
+        let image: String
+    }
+    
+    required convenience init?(map: Map) {
+        self.init()
+    }
+    
+    func mapping(map: Map) {
+        pid <- map["pid"]
+        name <- map["name"]
+        price <- map["price"]
+        offerPrice <- map["offerPrice"]
+        image <- map["image"]
+        desc <- map["desc"]
+    }
+}
+
+extension ShopperList{
+    func getTableData() -> ListTableData {
+        return ListTableData(title: self.name, des: self.offerPrice != "" ? self.offerPrice! : self.price, desColor: self.offerPrice != "" ? UIColor.red : UIColor.gray, image: self.image)
+    }
 }

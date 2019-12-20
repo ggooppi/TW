@@ -23,15 +23,15 @@
             </objects>
             <point key="canvasLocation" x="-1789" y="78"/>
         </scene>
-        <!--View Controller-->
+        <!--Product List View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TWWorkshop" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ProductListViewController" customModule="TWWorkshop" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="uPN-tT-zKc">
+                            <tableView hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="uPN-tT-zKc">
                                 <rect key="frame" x="0.0" y="44" width="320" height="436"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <connections>
@@ -39,11 +39,16 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="Sl5-2X-ZGe"/>
                                 </connections>
                             </tableView>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="cdm-KT-n4l">
+                                <rect key="frame" x="141.5" y="243.5" width="37" height="37"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="uPN-tT-zKc" secondAttribute="trailing" id="7KT-3i-jLg"/>
+                            <constraint firstItem="cdm-KT-n4l" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="CYf-hc-ScG"/>
                             <constraint firstItem="uPN-tT-zKc" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="O92-Nh-VmM"/>
+                            <constraint firstItem="cdm-KT-n4l" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="YZQ-Wv-1M5"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="uPN-tT-zKc" secondAttribute="bottom" id="oY7-3u-3KS"/>
                             <constraint firstItem="uPN-tT-zKc" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="wnC-X9-RbS"/>
                         </constraints>
@@ -51,12 +56,13 @@
                     </view>
                     <navigationItem key="navigationItem" id="EhC-xA-H5S"/>
                     <connections>
+                        <outlet property="activityIndicator" destination="cdm-KT-n4l" id="NvD-Xx-8lN"/>
                         <outlet property="tableView" destination="uPN-tT-zKc" id="F11-vu-3es"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-885" y="78"/>
+            <point key="canvasLocation" x="-1018" y="78"/>
         </scene>
     </scenes>
 </document>

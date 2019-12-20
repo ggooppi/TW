@@ -7,11 +7,14 @@
 //
 
 import UIKit
+import Alamofire
+import AlamofireImage
 
 class ProductListViewController: UIViewController {
     
     //MARK: -Properties
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
     let viewModel = ProductListViewModel()
     
@@ -25,23 +28,35 @@ class ProductListViewController: UIViewController {
     //MARK: -UI Function
     func setupUI() -> Void {
         self.title = "Shopper"
-        tableView.reloadData()
+        fetchData()
     }
     
-    
+    //MARK: - Network Call
+    func fetchData() -> Void {
+        activityIndicator.startAnimating()
+        viewModel.getProductList {[unowned self] (status, error) in
+            self.activityIndicator.stopAnimating()
+            if status{
+                self.tableView.isHidden = false
+                self.tableView.reloadData()
+            }else{
+                
+            }
+        }
+    }
 }
 
 //MARK: - Extensions
 extension ProductListViewController: UITableViewDelegate, UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return viewModel.getData().count
+        return viewModel.productListData.count
         
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         var defaultCell = tableView.dequeueReusableCell(withIdentifier: CellIdentifiers.defaultCell)
-        
+        let tableData = viewModel.productListData[indexPath.row].getTableData()
         if defaultCell == nil {
             defaultCell = UITableViewCell(style: .subtitle, reuseIdentifier: CellIdentifiers.defaultCell)
             defaultCell!.selectionStyle = .none
@@ -49,16 +64,14 @@ extension ProductListViewController: UITableViewDelegate, UITableViewDataSource{
             defaultCell!.detailTextLabel?.font = UIFont.systemFont(ofSize: 15)
             defaultCell!.textLabel?.numberOfLines = 0
             defaultCell!.detailTextLabel?.numberOfLines = 0
-            defaultCell!.detailTextLabel?.textColor = UIColor.gray
         }
         if let cell = defaultCell{
-            cell.textLabel?.text = viewModel.getData()[indexPath.row].name
-//            if let price = viewModel.getData()[indexPath.row].offerPrice, price != ""{
-//                cell.detailTextLabel?.text = price
-//                cell.detailTextLabel?.textColor = UIColor.red
-//            }else{
-//                cell.detailTextLabel?.text = viewModel.getData()[indexPath.row].price
-//            }
+            cell.textLabel?.text = tableData.title
+            cell.detailTextLabel?.text = tableData.des
+            cell.detailTextLabel?.textColor = tableData.desColor
+            if let url = URL(string: tableData.image) {
+                cell.imageView?.af_setImage(withURL: url)
+            }
             return cell
         }
         return UITableViewCell()

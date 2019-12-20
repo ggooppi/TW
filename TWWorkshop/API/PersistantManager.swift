@@ -41,4 +41,5 @@ final class PersistencyManager {
     func getData() -> [ShopperList] {
         return shopperList
     }
+    
 }
