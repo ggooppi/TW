@@ -19,7 +19,7 @@ class ProductListTableViewCell: UITableViewCell {
     @IBOutlet weak var wishListCount: UILabel!
     
     var productID = ""
-    var callback: (() -> Void)?
+    var callback: ((WishlistEvent) -> Void)?
     
     private var valueObservation: NSKeyValueObservation!
     
@@ -47,37 +47,25 @@ class ProductListTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     @IBAction func plusButtonONClick(_ sender: Any) {
-        let value = UserDefaults.standard.integer(forKey: productID)
-        UserDefaults.standard.set(value + 1, forKey: productID)
         if let callBack = self.callback{
-            callBack()
+            callBack(WishlistEvent.increase)
         }
     }
     
     @IBAction func minusButtonOnClick(_ sender: Any) {
-        let value = UserDefaults.standard.integer(forKey: productID)
-        if value != 0{
-            UserDefaults.standard.set(value - 1, forKey: productID)
-            if let callBack = self.callback{
-                callBack()
-            }
+        if let callBack = self.callback{
+            callBack(WishlistEvent.decrease)
         }
     }
     
-    func setupCell(cellData: ShopperList.ListTableData) -> Void {
+    func setupCell(cellData: ProductTableCellData) -> Void {
         productID = cellData.id
-        titleLabel.text = cellData.title
-        detailLabel.text = cellData.des
-        detailLabel.textColor = cellData.desColor
-        let value = UserDefaults.standard.integer(forKey: productID)
-        if value != 0{
-            wishListCount.isHidden = false
-            wishListCount.text = "(\(value))"
-        }else{
-            wishListCount.isHidden = true
-            wishListCount.text = "(\(value))"
-        }
-        Webservice.shared.getImageFrom(url: cellData.image, for: productImageView)
+        titleLabel.text = cellData.name
+        detailLabel.text = cellData.price
+        detailLabel.textColor = cellData.priceColor
+        wishListCount.text = "(\(cellData.wishList))"
+        wishListCount.isHidden = cellData.wishList == 0
+        Webservice.shared.getImageFrom(url: cellData.productImage, for: productImageView)
     }
     
 }

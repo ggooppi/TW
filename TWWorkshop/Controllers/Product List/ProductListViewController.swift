@@ -26,27 +26,18 @@ class ProductListViewController: UIViewController {
     }
     
     //MARK: -UI Function
-    func setupUI() -> Void {
+    private func setupUI() -> Void {
         self.title = "Shopper"
+        viewModel.dataSource = self
         let nibName = UINib(nibName: CellName.productListCell, bundle: nil)
         tableView.register(nibName, forCellReuseIdentifier: CellIdentifiers.productListCell)
         fetchData()
     }
     
     //MARK: - Network Call
-    func fetchData() -> Void {
+    private func fetchData() -> Void {
         activityIndicator.startAnimating()
-        viewModel.getProductList {[unowned self] (status, error) in
-            self.activityIndicator.stopAnimating()
-            if status{
-                self.tableView.isHidden = false
-                self.tableView.reloadData()
-            }else{
-                if let err = error{
-                    print(err)
-                }
-            }
-        }
+        viewModel.getProductList()
     }
 }
 
@@ -59,11 +50,28 @@ extension ProductListViewController: UITableViewDelegate, UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: CellIdentifiers.productListCell, for: indexPath) as! ProductListTableViewCell
-        cell.setupCell(cellData: viewModel.productListData[indexPath.row].getTableData())
-        cell.callback = {[unowned self] in
+        cell.setupCell(cellData: viewModel.getCellDataFor(product: viewModel.productListData[indexPath.row]))
+        cell.callback = { [unowned self] event in
+            self.viewModel.updateWishist(for: self.viewModel.productListData[indexPath.row].pid, eventType: event)
             self.tableView.reloadData()
         }
         return cell
     }
+    
+}
+
+extension ProductListViewController: NetworkCallHandler{
+    
+    func dataFetched() {
+        activityIndicator.stopAnimating()
+        tableView.reloadData()
+        tableView.isHidden = false
+    }
+    
+    func failedToFetchData(error: String) {
+        activityIndicator.stopAnimating()
+        print(error)
+    }
+    
 }
 

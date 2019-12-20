@@ -92,7 +92,7 @@
 		CCAF712823AC92A10040D340 /* TWWorkshop */ = {
 			isa = PBXGroup;
 			children = (
-				CCAF713D23AC92A90040D340 /* Delegates */,
+				CCAF713D23AC92A90040D340 /* App Delegates */,
 				CCAF713F23AC92C30040D340 /* Storyboards */,
 				CCAF713E23AC92B80040D340 /* Controllers */,
 				CCAF715223ACCD330040D340 /* Custom Cell */,
@@ -108,13 +108,13 @@
 			path = TWWorkshop;
 			sourceTree = "<group>";
 		};
-		CCAF713D23AC92A90040D340 /* Delegates */ = {
+		CCAF713D23AC92A90040D340 /* App Delegates */ = {
 			isa = PBXGroup;
 			children = (
 				CCAF712923AC92A10040D340 /* AppDelegate.swift */,
 				CCAF712B23AC92A10040D340 /* SceneDelegate.swift */,
 			);
-			path = Delegates;
+			path = "App Delegates";
 			sourceTree = "<group>";
 		};
 		CCAF713E23AC92B80040D340 /* Controllers */ = {

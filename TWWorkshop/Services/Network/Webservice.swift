@@ -27,9 +27,11 @@ public class Webservice: NSObject {
             .responseJSON { (response) in
                 switch response.result{
                 case .success(_):
-                    if let responseObject = response.result.value as? [[String:Any]]{
-                        completionHandler(true, responseObject, nil)
+                    guard let responseObject = response.result.value as? [[String:Any]] else{
+                        completionHandler(false, nil, NetworkError.failedToParse.rawValue)
+                        return
                     }
+                    completionHandler(true, responseObject, nil)
                 case .failure(_):
                     completionHandler(false, nil, NetworkError.somethingWentWrong.rawValue)
                 }

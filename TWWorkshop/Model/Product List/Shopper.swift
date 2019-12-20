@@ -9,21 +9,13 @@
 import Foundation
 import ObjectMapper
 
-class ShopperList: NSObject, Codable, Mappable{
+class ShopperList: Codable, Mappable{
     var pid = ""
     var name = ""
     var price = ""
-    var offerPrice : String? = ""
+    var offerPrice = ""
     var image = ""
     var desc = ""
-    
-    struct ListTableData {
-        let id: String
-        let title: String
-        let des: String
-        let desColor: UIColor
-        let image: String
-    }
     
     required convenience init?(map: Map) {
         self.init()
@@ -39,8 +31,11 @@ class ShopperList: NSObject, Codable, Mappable{
     }
 }
 
-extension ShopperList{
-    func getTableData() -> ListTableData {
-        return ListTableData(id: self.pid, title: self.name, des: self.offerPrice != "" ? self.offerPrice! : self.price, desColor: self.offerPrice != "" ? UIColor.red : UIColor.gray, image: self.image)
-    }
+struct ProductTableCellData {
+    let id: String
+    let name: String
+    let price: String
+    let priceColor: UIColor
+    let productImage: String
+    let wishList: Int
 }
