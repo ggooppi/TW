@@ -12,7 +12,7 @@
         <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="productListTableViewCell" rowHeight="129" id="KGk-i7-Jjw" customClass="ProductListTableViewCell" customModule="TWWorkshop" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="351" height="129"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
                 <rect key="frame" x="0.0" y="0.0" width="351" height="129"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
@@ -36,7 +36,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="w3c-yl-P5f">
-                        <rect key="frame" x="275" y="78" width="68" height="30"/>
+                        <rect key="frame" x="275" y="91" width="68" height="30"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D38-M5-pCe">
                                 <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
@@ -91,7 +91,7 @@
                     <constraint firstItem="8aT-J2-kVS" firstAttribute="centerY" secondItem="fg3-TA-Hrq" secondAttribute="centerY" id="aUg-iW-ZQm"/>
                     <constraint firstItem="EOg-GN-PL9" firstAttribute="leading" secondItem="fg3-TA-Hrq" secondAttribute="trailing" constant="8" id="cmh-PM-NQh"/>
                     <constraint firstItem="QLX-wM-HEp" firstAttribute="leading" secondItem="EOg-GN-PL9" secondAttribute="leading" id="grb-kX-olK"/>
-                    <constraint firstItem="w3c-yl-P5f" firstAttribute="bottom" secondItem="fg3-TA-Hrq" secondAttribute="bottom" id="qhE-12-sBf"/>
+                    <constraint firstItem="w3c-yl-P5f" firstAttribute="top" relation="greaterThanOrEqual" secondItem="QLX-wM-HEp" secondAttribute="bottom" constant="16" id="orT-az-XFv"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
