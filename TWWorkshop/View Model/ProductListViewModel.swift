@@ -28,7 +28,7 @@ class ProductListViewModel {
                     self.productListData = parsedData
                     completionHandler(true, nil)
                 }else{
-                     completionHandler(false, error)
+                     completionHandler(false, NetworkError.failedToParse.rawValue)
                 }
             }else{
                 completionHandler(false, error)

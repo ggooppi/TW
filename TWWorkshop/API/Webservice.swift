@@ -16,6 +16,9 @@ public class Webservice: NSObject {
     //MARK: - Properties
     static let shared = Webservice()
     
+    private override init() {
+    }
+    
     //MARK: - Functions
     func getProductList(completionHandler: @escaping ((Bool, [[String:Any]]?, String?) -> Void)) -> Void {
         
@@ -28,8 +31,14 @@ public class Webservice: NSObject {
                         completionHandler(true, responseObject, nil)
                     }
                 case .failure(_):
-                    completionHandler(false, nil, nil)
+                    completionHandler(false, nil, NetworkError.somethingWentWrong.rawValue)
                 }
+        }
+    }
+    
+    func getImageFrom(url: String, for imageView: UIImageView) -> Void {
+        if let url = URL(string: url) {
+            imageView.af_setImage(withURL: url)
         }
     }
     

@@ -18,6 +18,7 @@ class ShopperList: NSObject, Codable, Mappable{
     var desc = ""
     
     struct ListTableData {
+        let id: String
         let title: String
         let des: String
         let desColor: UIColor
@@ -40,6 +41,6 @@ class ShopperList: NSObject, Codable, Mappable{
 
 extension ShopperList{
     func getTableData() -> ListTableData {
-        return ListTableData(title: self.name, des: self.offerPrice != "" ? self.offerPrice! : self.price, desColor: self.offerPrice != "" ? UIColor.red : UIColor.gray, image: self.image)
+        return ListTableData(id: self.pid, title: self.name, des: self.offerPrice != "" ? self.offerPrice! : self.price, desColor: self.offerPrice != "" ? UIColor.red : UIColor.gray, image: self.image)
     }
 }

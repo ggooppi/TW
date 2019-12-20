@@ -8,13 +8,22 @@
 
 import Foundation
 
-//MARK: - Sample JSON
-let kSampleJSON = ""
-
-enum CellIdentifiers {
+//MARK: - Constant
+struct CellIdentifiers {
     static let defaultCell = "cell"
+    static let productListCell = "productListTableViewCell"
 }
 
-enum NetworkURL {
+struct CellName {
+    static let productListCell = "ProductListTableViewCell"
+}
+
+struct NetworkURL {
     static let productList = "http://www.mocky.io/v2/5dfb59e72f00006200ff9e80"
+}
+
+//MARK: - Error
+enum NetworkError: String, Error{
+    case somethingWentWrong = "Something Went Wrong"
+    case failedToParse = "Failed to parse data"
 }

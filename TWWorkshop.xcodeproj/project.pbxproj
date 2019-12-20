@@ -19,6 +19,10 @@
 		CCAF714B23AC9BF10040D340 /* sampleJSON.json in Resources */ = {isa = PBXBuildFile; fileRef = CCAF714A23AC9BF10040D340 /* sampleJSON.json */; };
 		CCAF714E23AC9CA20040D340 /* ProductListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCAF714D23AC9CA20040D340 /* ProductListViewModel.swift */; };
 		CCAF715123ACB30A0040D340 /* Webservice.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCAF715023ACB30A0040D340 /* Webservice.swift */; };
+		CCAF715523ACCD590040D340 /* ProductListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCAF715323ACCD590040D340 /* ProductListTableViewCell.swift */; };
+		CCAF715623ACCD590040D340 /* ProductListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CCAF715423ACCD590040D340 /* ProductListTableViewCell.xib */; };
+		CCAF715923ACD0860040D340 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCAF715823ACD0860040D340 /* Extensions.swift */; };
+		CCAF716023ACDA6D0040D340 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCAF715F23ACDA6D0040D340 /* Utilities.swift */; };
 		E8AAEB29F26160B1A4DC0B92 /* Pods_TWWorkshop.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8101363FEA2A2D749195FF9 /* Pods_TWWorkshop.framework */; };
 /* End PBXBuildFile section */
 
@@ -38,6 +42,10 @@
 		CCAF714A23AC9BF10040D340 /* sampleJSON.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = sampleJSON.json; sourceTree = "<group>"; };
 		CCAF714D23AC9CA20040D340 /* ProductListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListViewModel.swift; sourceTree = "<group>"; };
 		CCAF715023ACB30A0040D340 /* Webservice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Webservice.swift; sourceTree = "<group>"; };
+		CCAF715323ACCD590040D340 /* ProductListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListTableViewCell.swift; sourceTree = "<group>"; };
+		CCAF715423ACCD590040D340 /* ProductListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductListTableViewCell.xib; sourceTree = "<group>"; };
+		CCAF715823ACD0860040D340 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		CCAF715F23ACDA6D0040D340 /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		D8101363FEA2A2D749195FF9 /* Pods_TWWorkshop.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TWWorkshop.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FED278E885A36F659F8E2A8C /* Pods-TWWorkshop.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TWWorkshop.debug.xcconfig"; path = "Target Support Files/Pods-TWWorkshop/Pods-TWWorkshop.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -87,9 +95,11 @@
 				CCAF713D23AC92A90040D340 /* Delegates */,
 				CCAF713F23AC92C30040D340 /* Storyboards */,
 				CCAF713E23AC92B80040D340 /* Controllers */,
+				CCAF715223ACCD330040D340 /* Custom Cell */,
 				CCAF714C23AC9C850040D340 /* View Model */,
 				CCAF714723AC9ACD0040D340 /* Model */,
 				CCAF714423AC9A770040D340 /* API */,
+				CCAF715B23ACD9A80040D340 /* Helpers */,
 				CCAF714023AC95750040D340 /* Constant */,
 				CCAF713223AC92A20040D340 /* Assets.xcassets */,
 				CCAF713723AC92A20040D340 /* Info.plist */,
@@ -155,6 +165,40 @@
 				CCAF714D23AC9CA20040D340 /* ProductListViewModel.swift */,
 			);
 			path = "View Model";
+			sourceTree = "<group>";
+		};
+		CCAF715223ACCD330040D340 /* Custom Cell */ = {
+			isa = PBXGroup;
+			children = (
+				CCAF715323ACCD590040D340 /* ProductListTableViewCell.swift */,
+				CCAF715423ACCD590040D340 /* ProductListTableViewCell.xib */,
+			);
+			path = "Custom Cell";
+			sourceTree = "<group>";
+		};
+		CCAF715723ACD0640040D340 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				CCAF715823ACD0860040D340 /* Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		CCAF715B23ACD9A80040D340 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				CCAF715E23ACD9C80040D340 /* Utilities */,
+				CCAF715723ACD0640040D340 /* Extensions */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		CCAF715E23ACD9C80040D340 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				CCAF715F23ACDA6D0040D340 /* Utilities.swift */,
+			);
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 		DB7C17961A6E046E5084349B /* Frameworks */ = {
@@ -225,6 +269,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CCAF715623ACCD590040D340 /* ProductListTableViewCell.xib in Resources */,
 				CCAF713623AC92A20040D340 /* LaunchScreen.storyboard in Resources */,
 				CCAF713323AC92A20040D340 /* Assets.xcassets in Resources */,
 				CCAF713123AC92A10040D340 /* Main.storyboard in Resources */,
@@ -283,12 +328,15 @@
 			files = (
 				CCAF712E23AC92A10040D340 /* ProductListViewController.swift in Sources */,
 				CCAF714623AC9A890040D340 /* PersistantManager.swift in Sources */,
+				CCAF716023ACDA6D0040D340 /* Utilities.swift in Sources */,
 				CCAF715123ACB30A0040D340 /* Webservice.swift in Sources */,
 				CCAF712A23AC92A10040D340 /* AppDelegate.swift in Sources */,
 				CCAF714E23AC9CA20040D340 /* ProductListViewModel.swift in Sources */,
+				CCAF715923ACD0860040D340 /* Extensions.swift in Sources */,
 				CCAF712C23AC92A10040D340 /* SceneDelegate.swift in Sources */,
 				CCAF714223AC95F60040D340 /* Constant.swift in Sources */,
 				CCAF714923AC9AEB0040D340 /* Shopper.swift in Sources */,
+				CCAF715523ACCD590040D340 /* ProductListTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

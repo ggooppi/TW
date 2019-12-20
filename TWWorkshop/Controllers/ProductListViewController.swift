@@ -28,6 +28,8 @@ class ProductListViewController: UIViewController {
     //MARK: -UI Function
     func setupUI() -> Void {
         self.title = "Shopper"
+        let nibName = UINib(nibName: CellName.productListCell, bundle: nil)
+        tableView.register(nibName, forCellReuseIdentifier: CellIdentifiers.productListCell)
         fetchData()
     }
     
@@ -40,7 +42,9 @@ class ProductListViewController: UIViewController {
                 self.tableView.isHidden = false
                 self.tableView.reloadData()
             }else{
-                
+                if let err = error{
+                    print(err)
+                }
             }
         }
     }
@@ -51,33 +55,15 @@ extension ProductListViewController: UITableViewDelegate, UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return viewModel.productListData.count
-        
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        var defaultCell = tableView.dequeueReusableCell(withIdentifier: CellIdentifiers.defaultCell)
-        let tableData = viewModel.productListData[indexPath.row].getTableData()
-        
-        if defaultCell == nil {
-            defaultCell = UITableViewCell(style: .subtitle, reuseIdentifier: CellIdentifiers.defaultCell)
-            defaultCell!.selectionStyle = .none
-            defaultCell!.textLabel?.font = UIFont.systemFont(ofSize: 17)
-            defaultCell!.detailTextLabel?.font = UIFont.systemFont(ofSize: 15)
-            defaultCell!.textLabel?.numberOfLines = 0
-            defaultCell!.detailTextLabel?.numberOfLines = 0
+        let cell = tableView.dequeueReusableCell(withIdentifier: CellIdentifiers.productListCell, for: indexPath) as! ProductListTableViewCell
+        cell.setupCell(cellData: viewModel.productListData[indexPath.row].getTableData())
+        cell.callback = {[unowned self] in
+            self.tableView.reloadData()
         }
-        
-        if let cell = defaultCell{
-            cell.textLabel?.text = tableData.title
-            cell.detailTextLabel?.text = tableData.des
-            cell.detailTextLabel?.textColor = tableData.desColor
-            if let url = URL(string: tableData.image) {
-                cell.imageView?.af_setImage(withURL: url)
-            }
-            return cell
-        }
-        
-        return UITableViewCell()
+        return cell
     }
 }
 
