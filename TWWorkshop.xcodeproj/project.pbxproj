@@ -98,7 +98,7 @@
 				CCAF715223ACCD330040D340 /* Custom Cell */,
 				CCAF714C23AC9C850040D340 /* View Model */,
 				CCAF714723AC9ACD0040D340 /* Model */,
-				CCAF714423AC9A770040D340 /* API */,
+				CCAF714423AC9A770040D340 /* Services */,
 				CCAF715B23ACD9A80040D340 /* Helpers */,
 				CCAF714023AC95750040D340 /* Constant */,
 				CCAF713223AC92A20040D340 /* Assets.xcassets */,
@@ -120,7 +120,7 @@
 		CCAF713E23AC92B80040D340 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				CCAF712D23AC92A10040D340 /* ProductListViewController.swift */,
+				CCAF716623ACE1B90040D340 /* Product List */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -142,19 +142,19 @@
 			path = Constant;
 			sourceTree = "<group>";
 		};
-		CCAF714423AC9A770040D340 /* API */ = {
+		CCAF714423AC9A770040D340 /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				CCAF714523AC9A890040D340 /* PersistantManager.swift */,
-				CCAF715023ACB30A0040D340 /* Webservice.swift */,
+				CCAF716223ACE1430040D340 /* Local */,
+				CCAF716123ACE1310040D340 /* Network */,
 			);
-			path = API;
+			path = Services;
 			sourceTree = "<group>";
 		};
 		CCAF714723AC9ACD0040D340 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				CCAF714823AC9AEB0040D340 /* Shopper.swift */,
+				CCAF716523ACE1A20040D340 /* Product List */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -162,7 +162,7 @@
 		CCAF714C23AC9C850040D340 /* View Model */ = {
 			isa = PBXGroup;
 			children = (
-				CCAF714D23AC9CA20040D340 /* ProductListViewModel.swift */,
+				CCAF716423ACE18F0040D340 /* Product List */,
 			);
 			path = "View Model";
 			sourceTree = "<group>";
@@ -170,8 +170,7 @@
 		CCAF715223ACCD330040D340 /* Custom Cell */ = {
 			isa = PBXGroup;
 			children = (
-				CCAF715323ACCD590040D340 /* ProductListTableViewCell.swift */,
-				CCAF715423ACCD590040D340 /* ProductListTableViewCell.xib */,
+				CCAF716323ACE1710040D340 /* Product List */,
 			);
 			path = "Custom Cell";
 			sourceTree = "<group>";
@@ -199,6 +198,55 @@
 				CCAF715F23ACDA6D0040D340 /* Utilities.swift */,
 			);
 			path = Utilities;
+			sourceTree = "<group>";
+		};
+		CCAF716123ACE1310040D340 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				CCAF715023ACB30A0040D340 /* Webservice.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		CCAF716223ACE1430040D340 /* Local */ = {
+			isa = PBXGroup;
+			children = (
+				CCAF714523AC9A890040D340 /* PersistantManager.swift */,
+			);
+			path = Local;
+			sourceTree = "<group>";
+		};
+		CCAF716323ACE1710040D340 /* Product List */ = {
+			isa = PBXGroup;
+			children = (
+				CCAF715323ACCD590040D340 /* ProductListTableViewCell.swift */,
+				CCAF715423ACCD590040D340 /* ProductListTableViewCell.xib */,
+			);
+			path = "Product List";
+			sourceTree = "<group>";
+		};
+		CCAF716423ACE18F0040D340 /* Product List */ = {
+			isa = PBXGroup;
+			children = (
+				CCAF714D23AC9CA20040D340 /* ProductListViewModel.swift */,
+			);
+			path = "Product List";
+			sourceTree = "<group>";
+		};
+		CCAF716523ACE1A20040D340 /* Product List */ = {
+			isa = PBXGroup;
+			children = (
+				CCAF714823AC9AEB0040D340 /* Shopper.swift */,
+			);
+			path = "Product List";
+			sourceTree = "<group>";
+		};
+		CCAF716623ACE1B90040D340 /* Product List */ = {
+			isa = PBXGroup;
+			children = (
+				CCAF712D23AC92A10040D340 /* ProductListViewController.swift */,
+			);
+			path = "Product List";
 			sourceTree = "<group>";
 		};
 		DB7C17961A6E046E5084349B /* Frameworks */ = {
