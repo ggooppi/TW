@@ -23,19 +23,19 @@ class WishlistViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        updateUI()
+//        updateUI()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
-//        updateUI()
+        updateUI()
     }
     
     func updateUI() {
         let dataToshow = viewmodel.processWishlistData()
-//        totalItems.text = "\(dataToshow.items)"
-//        totalSavings.text = dataToshow.totalSavings
-//        amountToBePaid.text = dataToshow.total
+        totalItems.text = "\(dataToshow.items)"
+        totalSavings.text = dataToshow.totalSavings
+        amountToBePaid.text = dataToshow.total
     }
 
     /*

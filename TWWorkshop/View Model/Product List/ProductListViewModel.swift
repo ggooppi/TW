@@ -133,7 +133,7 @@ extension ProductListViewModel{
                 productToReturn = productListData[index]
                 itemFound = true
             }else{
-                index += index
+                index += 1
             }
         }
         
@@ -142,8 +142,8 @@ extension ProductListViewModel{
     
     func processWishlistData() -> WishlistData {
         var numberOfItems = 0
-        var savings = 0
-        var totalAmount = 0
+        var savings = 0.0
+        var totalAmount = 0.00
         
         wishlist.forEach { (arg) in
             let (id, count) = arg
@@ -153,17 +153,18 @@ extension ProductListViewModel{
                 { return  }
                 
                 if !productForID.offerPrice.isEmpty{
-                    savings = savings + (Utilities.shared.convertStringToInt(value: productForID.price) - Utilities.shared.convertStringToInt(value: productForID.offerPrice))
-                    totalAmount = totalAmount + (Utilities.shared.convertStringToInt(value: productForID.offerPrice) * count)
+                    savings = savings
+                        + (Utilities.shared.convertStringToDouble(value: productForID.price)
+                            - Utilities.shared.convertStringToDouble(value: productForID.offerPrice))
+                    
+                    totalAmount = totalAmount + (Utilities.shared.convertStringToDouble(value: productForID.offerPrice) * Double(count))
                 }else{
-                    totalAmount = totalAmount + (Utilities.shared.convertStringToInt(value: productForID.price) * count)
+                    totalAmount = totalAmount + (Utilities.shared.convertStringToDouble(value: productForID.price) * Double(count))
                 }
-                
-                
                 
             }
         }
         
-        return WishlistData(items: numberOfItems, totalSavings: "$\(savings)", total: "$\(totalAmount)")
+        return WishlistData(items: numberOfItems, totalSavings: "$\(String(format: "%.2f", savings))", total: "$\(String(format: "%.2f", totalAmount))")
     }
 }

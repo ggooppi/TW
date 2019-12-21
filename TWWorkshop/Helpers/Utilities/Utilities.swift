@@ -19,10 +19,10 @@ class Utilities: NSObject {
         UserDefaults.standard.set(value, forKey: key)
     }
     
-    func convertStringToInt(value: String) -> Int {
+    func convertStringToDouble(value: String) -> Double {
         var valueToBeChanges = value
         valueToBeChanges = valueToBeChanges.replacingOccurrences(of: ",", with: "")
-        valueToBeChanges = String(describing: valueToBeChanges.removeFirst()) 
-        return Int(valueToBeChanges) ?? 0
+        valueToBeChanges = valueToBeChanges.replacingOccurrences(of: "$", with: "")
+        return Double(valueToBeChanges) ?? 0
     }
 }
