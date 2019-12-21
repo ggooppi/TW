@@ -18,4 +18,11 @@ class Utilities: NSObject {
     func saveToUserDefaults(for key: String, with value: String) -> Void {
         UserDefaults.standard.set(value, forKey: key)
     }
+    
+    func convertStringToInt(value: String) -> Int {
+        var valueToBeChanges = value
+        valueToBeChanges = valueToBeChanges.replacingOccurrences(of: ",", with: "")
+        valueToBeChanges = String(describing: valueToBeChanges.removeFirst()) 
+        return Int(valueToBeChanges) ?? 0
+    }
 }

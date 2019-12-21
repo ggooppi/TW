@@ -14,6 +14,10 @@ struct CellIdentifiers {
     static let productListCell = "productListTableViewCell"
 }
 
+struct SegueIdentifier{
+    static let goToDetail = "goToDetail"
+}
+
 struct CellName {
     static let productListCell = "ProductListTableViewCell"
 }

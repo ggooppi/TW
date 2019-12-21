@@ -16,7 +16,7 @@ class ProductListViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
-    let viewModel = ProductListViewModel()
+    let viewModel = ProductListViewModel.shared
     
     //MARK: - Lifecycle
     override func viewDidLoad() {
@@ -27,7 +27,7 @@ class ProductListViewController: UIViewController {
     
     //MARK: -UI Function
     private func setupUI() -> Void {
-        self.title = "Shopper"
+        self.navigationController?.title = "Shopper"
         viewModel.dataSource = self
         let nibName = UINib(nibName: CellName.productListCell, bundle: nil)
         tableView.register(nibName, forCellReuseIdentifier: CellIdentifiers.productListCell)
@@ -38,6 +38,18 @@ class ProductListViewController: UIViewController {
     private func fetchData() -> Void {
         activityIndicator.startAnimating()
         viewModel.getProductList()
+    }
+    
+    // MARK: - Navigation
+
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Get the new view controller using segue.destination.
+        // Pass the selected object to the new view controller.
+        if let destination = segue.destination as? ProductDetailViewController{
+            destination.viewModel.selectedProduct = viewModel.productListData[sender as! Int]
+        }
+        
     }
 }
 
@@ -56,6 +68,10 @@ extension ProductListViewController: UITableViewDelegate, UITableViewDataSource{
             self.tableView.reloadData()
         }
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.performSegue(withIdentifier: SegueIdentifier.goToDetail, sender: indexPath.row)
     }
     
 }

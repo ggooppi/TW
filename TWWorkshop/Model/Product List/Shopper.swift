@@ -39,3 +39,9 @@ struct ProductTableCellData {
     let productImage: String
     let wishList: Int
 }
+
+struct WishlistData {
+    let items: Int
+    let totalSavings: String
+    let total: String
+}
